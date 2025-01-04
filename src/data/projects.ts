@@ -1,28 +1,37 @@
 import { Project } from '../types';
 
-export const projectsData: Project[] = [
+export const getProjectsData = (language: string): Project[] => [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce platform built with React and Node.js',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Redux'],
-    link: 'https://example.com/ecommerce',
-    image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc',
+    title: language === 'pt' ? 'Clinic Pro' : 'Clinic Pro',
+    description:
+      language === 'pt'
+        ? 'Uma plataforma para clínicas gerenciarem seus atendimentos e pacientes.'
+        : 'A platform for clinics to manage their appointments and patients.',
+    technologies: ['React', 'Node.js', 'TypeScript', 'MongoDB'],
+    link: 'https://github.com/BrunoFrancio/clinicpro',
+    image: './clinic-pro.webp',
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates',
-    technologies: ['Next.js', 'TypeScript', 'Prisma', 'Socket.io'],
-    link: 'https://example.com/taskapp',
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b',
+    title: language === 'pt' ? 'SPA Arquitetura' : 'SPA Arquitetura',
+    description:
+      language === 'pt'
+        ? 'Um site moderno e interativo para promover serviços de arquitetura.'
+        : 'A modern and interactive website to promote architecture services.',
+    technologies: ['Next.js', 'Tailwind CSS', 'Vercel'],
+    link: 'https://github.com/BrunoFrancio/spaarquitetura',
+    image: './spapiscinas.png',
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'A weather dashboard with interactive maps and forecasts',
-    technologies: ['React', 'OpenWeatherMap API', 'Leaflet'],
-    link: 'https://example.com/weather',
+    title: language === 'pt' ? 'Challenge Coodesh' : 'Coodesh Challenge',
+    description:
+      language === 'pt'
+        ? 'Solução para o desafio de front-end proposto pela Coodesh.'
+        : 'Solution for the front-end challenge proposed by Coodesh.',
+    technologies: ['React', 'API Integration', 'CSS Modules'],
+    link: 'https://github.com/BrunoFrancio/challenge',
     image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b',
   },
 ];

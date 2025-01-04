@@ -39,7 +39,9 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </a>
               <a
-                href="#contact"
+                href="https://api.whatsapp.com/send/?phone=54999832993&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:text-indigo-400 dark:border-indigo-400 dark:hover:bg-indigo-900/30 transition-colors"
               >
                 {language === 'pt' ? 'Entre em contato' : 'Contact me'}
@@ -47,7 +49,7 @@ const Hero = () => {
             </div>
             <div className="flex space-x-4 pt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/BrunoFrancio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
@@ -55,7 +57,7 @@ const Hero = () => {
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/bruno-francio/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
@@ -66,7 +68,7 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 mt-8 md:mt-0">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&h=800"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQFbsU_T_BpOLg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712069237315?e=1741219200&v=beta&t=V6cJRLvZmhKEbT5aUePLalDxW_JbezG_lJOA2a-PSgw"
               alt="Profile"
               className="w-80 h-80 rounded-full object-cover mx-auto shadow-2xl"
             />

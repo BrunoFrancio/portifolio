@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
@@ -7,8 +6,6 @@ import About from './components/About';
 import Skills from './components/Skills/Skills';
 import Portfolio from './components/Portfolio/Portfolio';
 import Experience from './components/Experience/Experience';
-import Testimonials from './components/Testimonials/Testimonials';
-import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -33,12 +30,6 @@ function App() {
             <section id="experience">
               <Experience />
             </section>
-            <section id="testimonials">
-              <Testimonials />
-            </section>
-            <section id="contact">
-              <Contact />
-            </section>
           </main>
           <Footer />
         </div>
@@ -46,6 +37,5 @@ function App() {
     </ThemeProvider>
   );
 }
-
 
 export default App;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Moon, Sun, Languages } from 'lucide-react';
+import { Moon, Sun, Languages, Code } from 'lucide-react'; // Adicionado o ícone de código
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-scroll';
@@ -14,17 +14,17 @@ const Header = () => {
     { name: language === 'pt' ? 'Habilidades' : 'Skills', href: 'skills' },
     { name: language === 'pt' ? 'Portfólio' : 'Portfolio', href: 'portfolio' },
     { name: language === 'pt' ? 'Experiência' : 'Experience', href: 'experience' },
-    { name: language === 'pt' ? 'Depoimentos' : 'Testimonials', href: 'testimonials' },
-    { name: language === 'pt' ? 'Contato' : 'Contact', href: 'contact' },
   ];
 
   return (
     <header className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="text-2xl font-bold text-gray-900 dark:text-white">
-            Portfolio
+          <div className="flex items-center text-2xl font-bold text-gray-900 dark:text-white">
+          <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+              {'<>'}
+            </span>
+            Bruno Francio
           </div>
           
           {/* Navigation */}
@@ -32,9 +32,9 @@ const Header = () => {
             {navigation.map((item) => (
               <Link
                 key={item.href}
-                to={item.href} // Nome correspondente ao `id` de cada seção
-                smooth={true} // Habilita a rolagem suave
-                duration={500} // Tempo de transição em milissegundos
+                to={item.href}
+                smooth={true}
+                duration={500}
                 className="cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
               >
                 {item.name}

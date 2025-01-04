@@ -1,10 +1,12 @@
 import React from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import TimelineItem from './TimelineItem';
 import { experienceData } from '../../data/experience';
+import TimelineItem from './TimelineItem';
 
 const Experience = () => {
   const { language } = useLanguage();
+
+  const experiences = experienceData(language);
 
   return (
     <section id="experience" className="py-20">
@@ -12,8 +14,8 @@ const Experience = () => {
         <h2 className="text-3xl font-bold text-center mb-12">
           {language === 'pt' ? 'Minha Experiência' : 'My Experience'}
         </h2>
-        <div className="max-w-3xl mx-auto">
-          {experienceData.map((item) => (
+        <div className="max-w-3xl mx-auto space-y-8">
+          {experiences.map((item) => (
             <TimelineItem key={item.id} {...item} />
           ))}
         </div>
