@@ -33,16 +33,6 @@ const ProjectCard: React.FC<Project> = ({ title, description, technologies, link
             <ExternalLink className="w-4 h-4" />
             {language === 'pt' ? 'Visualizar' : 'View'}
           </a>
-          {/* Link do GitHub */}
-          <a
-            href={`https://github.com/username/${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:underline"
-          >
-            <Github className="w-4 h-4" />
-            GitHub
-          </a>
         </div>
       </div>
     </div>

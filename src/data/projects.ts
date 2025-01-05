@@ -28,8 +28,8 @@ export const getProjectsData = (language: string): Project[] => [
     title: language === 'pt' ? 'Challenge Coodesh' : 'Coodesh Challenge',
     description:
       language === 'pt'
-        ? 'Solução para o desafio de front-end proposto pela Coodesh.'
-        : 'Solution for the front-end challenge proposed by Coodesh.',
+        ? 'Solução para o desafio de back-end proposto pela Coodesh.'
+        : 'Solution for the back-end challenge proposed by Coodesh.',
     technologies: ['Laravel', 'API Integration', 'PHP', 'MySql', 'Docker'],
     link: 'https://github.com/BrunoFrancio/challenge',
     image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b',
