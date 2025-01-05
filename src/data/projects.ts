@@ -10,7 +10,7 @@ export const getProjectsData = (language: string): Project[] => [
         : 'A platform for clinics to manage their appointments and patients.',
     technologies: ['Laravel', 'PHP', 'Tailwind/CSSS', 'MySql', 'Docker'],
     link: 'https://github.com/BrunoFrancio/clinicpro',
-    image: './clinic-pro.webp',
+    image: '/clinic-pro.webp',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const getProjectsData = (language: string): Project[] => [
         : 'A modern and interactive website to promote architecture services.',
     technologies: ['Next.js', 'Tailwind CSS', 'Vercel'],
     link: 'https://github.com/BrunoFrancio/spaarquitetura',
-    image: './spapiscinas.png',
+    image: '/spapiscinas.png',
   },
   {
     id: 3,
