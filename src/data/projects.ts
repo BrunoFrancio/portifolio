@@ -8,7 +8,7 @@ export const getProjectsData = (language: string): Project[] => [
       language === 'pt'
         ? 'Uma plataforma para clínicas gerenciarem seus atendimentos e pacientes.'
         : 'A platform for clinics to manage their appointments and patients.',
-    technologies: ['React', 'Node.js', 'TypeScript', 'MongoDB'],
+    technologies: ['Laravel', 'PHP', 'Tailwind/CSSS', 'MySql', 'Docker'],
     link: 'https://github.com/BrunoFrancio/clinicpro',
     image: './clinic-pro.webp',
   },
@@ -30,7 +30,7 @@ export const getProjectsData = (language: string): Project[] => [
       language === 'pt'
         ? 'Solução para o desafio de front-end proposto pela Coodesh.'
         : 'Solution for the front-end challenge proposed by Coodesh.',
-    technologies: ['React', 'API Integration', 'CSS Modules'],
+    technologies: ['Laravel', 'API Integration', 'PHP', 'MySql', 'Docker'],
     link: 'https://github.com/BrunoFrancio/challenge',
     image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b',
   },
