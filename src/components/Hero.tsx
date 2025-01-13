@@ -68,8 +68,8 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 mt-8 md:mt-0">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E03AQFbsU_T_BpOLg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712069237315?e=1741219200&v=beta&t=V6cJRLvZmhKEbT5aUePLalDxW_JbezG_lJOA2a-PSgw"
-              alt="Profile"
+              src="/brunofrancio.webp"
+              alt="Bruno Francio"
               className="w-80 h-80 rounded-full object-cover mx-auto shadow-2xl"
             />
           </div>

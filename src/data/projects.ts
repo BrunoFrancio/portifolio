@@ -32,6 +32,6 @@ export const getProjectsData = (language: string): Project[] => [
         : 'Solution for the back-end challenge proposed by Coodesh.',
     technologies: ['Laravel', 'API Integration', 'PHP', 'MySql', 'Docker'],
     link: 'https://github.com/BrunoFrancio/challenge',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b',
+    image: '/challenge.webp',
   },
 ];
