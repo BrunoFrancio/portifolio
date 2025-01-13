@@ -1,6 +1,7 @@
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
