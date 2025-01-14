@@ -19,12 +19,14 @@ const Projetos: React.FC = () => {
         const response = await fetch('https://api.github.com/users/BrunoFrancio/repos');
         const repos = await response.json();
 
+        // Requisição para obter linguagens
         const fetchLanguages = async (repo: any) => {
           const langResponse = await fetch(repo.languages_url);
           const languagesData = await langResponse.json();
           return Object.keys(languagesData);
         };
 
+        // Adiciona linguagens aos repositórios
         const enrichedRepos = await Promise.all(
           repos.map(async (repo: any) => ({
             id: repo.id,
