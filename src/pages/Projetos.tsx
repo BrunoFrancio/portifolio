@@ -47,24 +47,24 @@ const Projetos: React.FC = () => {
   }, []);
 
   return (
-    <div className="p-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
-      <h1 className="text-3xl font-extrabold text-center text-gray-900 dark:text-white mb-8">
+    <div className="p-8 bg-background min-h-screen">
+      <h1 className="text-3xl font-extrabold text-center text-foreground mb-8">
         Meus Projetos
       </h1>
       {isLoading ? (
-        <p className="text-center text-gray-600 dark:text-gray-400">Carregando projetos...</p>
+        <p className="text-center text-muted-foreground">Carregando projetos...</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {repositories.map((project) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between"
+              className="bg-card p-6 rounded-lg shadow-lg flex flex-col justify-between border border-border"
             >
               <div>
-                <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                <h2 className="text-xl font-bold text-foreground mb-2">
                   {project.name}
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-muted-foreground mb-4">
                   {project.description || 'Sem descrição disponível.'}
                 </p>
                 <ul className="flex flex-wrap gap-2 mb-4">
@@ -72,13 +72,13 @@ const Projetos: React.FC = () => {
                     project.languages.map((lang, index) => (
                       <li
                         key={index}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                        className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
                       >
                         {lang}
                       </li>
                     ))
                   ) : (
-                    <li className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-sm">
+                    <li className="px-3 py-1 bg-secondary text-muted-foreground rounded-full text-sm">
                       Sem linguagens
                     </li>
                   )}
@@ -88,7 +88,7 @@ const Projetos: React.FC = () => {
                 href={project.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-foreground bg-primary rounded-lg shadow-md hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Ver Projeto

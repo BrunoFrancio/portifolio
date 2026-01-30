@@ -5,3 +5,118 @@
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: hsl(222 47% 6%);
+    color: hsl(210 40% 98%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Glows - efeitos de brilho radial */
+    background-image:
+        radial-gradient(900px circle at 20% 10%, hsl(199 89% 48% / 0.22), transparent 55%),
+        radial-gradient(800px circle at 80% 30%, hsl(250 90% 60% / 0.12), transparent 55%),
+        radial-gradient(1000px circle at 50% 110%, hsl(170 90% 55% / 0.10), transparent 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    /* Grid geométrico */
+    background-image:
+        linear-gradient(to right, hsl(210 40% 98% / 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, hsl(210 40% 98% / 0.06) 1px, transparent 1px);
+    background-size: 72px 72px;
+
+    /* Vignette - escurecimento nas bordas */
+    mask-image: radial-gradient(circle at top, black 0%, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle at top, black 0%, transparent 70%);
+}
+
+/* Garantir que o conteúdo fique acima do background */
+#root {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade - reduzir efeitos em mobile */
+@media (max-width: 768px) {
+    body {
+        background-image:
+            radial-gradient(600px circle at 20% 10%, hsl(199 89% 48% / 0.15), transparent 55%),
+            radial-gradient(500px circle at 80% 30%, hsl(250 90% 60% / 0.08), transparent 55%);
+    }
+
+    body::before {
+        background-size: 48px 48px;
+    }
+}
+
+/* Tech Leads Background Pattern - Reutilizável */
+:root {
+    --tl-bg: 222 47% 6%;
+    --tl-fg: 210 40% 98%;
+    --tl-accent: 199 89% 48%;
+}
+
+@layer components {
+    .tl-bg-pattern {
+        position: absolute !important;
+        inset: 0 !important;
+        pointer-events: none !important;
+        z-index: -1 !important;
+
+        background-color: hsl(var(--tl-bg)) !important;
+        background-image:
+            radial-gradient(600px circle at 30% 20%, hsl(var(--tl-accent) / 0.25), transparent 60%),
+            radial-gradient(700px circle at 70% 40%, hsl(var(--tl-accent) / 0.15), transparent 65%),
+            linear-gradient(to right, hsl(var(--tl-accent) / 0.12) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(var(--tl-accent) / 0.12) 1px, transparent 1px) !important;
+        background-size:
+            auto,
+            auto,
+            64px 64px,
+            64px 64px !important;
+        background-position: center !important;
+        opacity: 1 !important;
+    }
+
+    @supports (mask-image: radial-gradient(#000, transparent)) {
+        .tl-bg-pattern {
+            mask-image: radial-gradient(ellipse at top, #000 55%, transparent 100%) !important;
+        }
+    }
+
+    .tl-bg-noise::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        pointer-events: none !important;
+        z-index: -1 !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E") !important;
+        mix-blend-mode: overlay !important;
+        opacity: 0.25 !important;
+    }
+
+    /* Responsividade para o padrão */
+    @media (max-width: 768px) {
+        .tl-bg-pattern {
+            background-image:
+                radial-gradient(400px circle at 30% 20%, hsl(var(--tl-accent) / 0.18), transparent 60%),
+                radial-gradient(450px circle at 70% 40%, hsl(var(--tl-accent) / 0.12), transparent 65%),
+                linear-gradient(to right, hsl(var(--tl-accent) / 0.10) 1px, transparent 1px),
+                linear-gradient(to bottom, hsl(var(--tl-accent) / 0.10) 1px, transparent 1px) !important;
+            background-size:
+                auto,
+                auto,
+                48px 48px,
+                48px 48px !important;
+        }
+    }
+}

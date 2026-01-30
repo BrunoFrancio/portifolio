@@ -7,16 +7,16 @@ const ProjectCard: React.FC<Project> = ({ title, description, technologies, link
   const { language } = useLanguage();
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-card rounded-lg shadow-lg overflow-hidden border border-border">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+        <h3 className="text-xl font-semibold mb-2 text-foreground">{title}</h3>
+        <p className="text-muted-foreground mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm"
+              className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
             >
               {tech}
             </span>
@@ -28,7 +28,7 @@ const ProjectCard: React.FC<Project> = ({ title, description, technologies, link
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:underline"
+            className="flex items-center gap-2 text-primary hover:underline"
           >
             <ExternalLink className="w-4 h-4" />
             {language === 'pt' ? 'Visualizar' : 'View'}
