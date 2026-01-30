@@ -7,16 +7,16 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-800 py-8">
+    <footer className="bg-card py-8 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Nome com logo de código */}
           <div className="flex items-center gap-2 text-center md:text-left">
             <div>
-              <h3 className="text-xl font-bold mb-2"> <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+              <h3 className="text-xl font-bold mb-2 text-foreground"> <span className="text-2xl font-bold text-primary">
               {'<>'}
             </span> Bruno Francio</h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-muted-foreground">
                 {language === 'pt'
                   ? 'Desenvolvedor Full Stack'
                   : 'Full Stack Developer'}
@@ -30,7 +30,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/bruno-francio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -41,7 +41,7 @@ const Footer = () => {
               href="https://github.com/BrunoFrancio"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
 
           {/* Direitos reservados */}
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-muted-foreground">
             © {year} {language === 'pt' ? 'Todos os direitos reservados' : 'All rights reserved'}
           </p>
         </div>
