@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
+
+const ThreeScene = lazy(() => import('./ThreeScene'));
 
 const cases = [
   {
@@ -52,6 +54,7 @@ function App() {
 
       <main>
         <section className="hero" id="inicio">
+          <Suspense fallback={null}><ThreeScene /></Suspense>
           <div className="hero-orbit" aria-hidden="true"><span className="orbit orbit-one"/><span className="orbit orbit-two"/><img src="/brunofrancio.webp" alt="" /></div>
           <p className="eyebrow">Desenvolvedor de produtos digitais</p>
           <h1>Sistemas que resolvem<em> problemas de verdade.</em></h1>
