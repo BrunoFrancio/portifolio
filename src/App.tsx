@@ -65,11 +65,14 @@ function App() {
           <a className="scroll-cue" href="#trabalho" aria-label="Ir para trabalhos selecionados"><ArrowDown/></a>
         </section>
 
-        <section className="proof-strip" aria-label="Números da experiência">
-          <div><strong>4 mil</strong><span>clínicas na base de um SaaS que ajudei a evoluir</span></div>
-          <div><strong>10 mil</strong><span>check-ins processados por dia nos aplicativos</span></div>
-          <div><strong>2 mil</strong><span>unidades em operações enterprise atendidas</span></div>
-          <div><strong>4 anos</strong><span>transformando regra de negócio em software</span></div>
+        <section className="proof-section" aria-label="Números da experiência">
+          <p className="proof-title">Impacto em produção</p>
+          <div className="proof-strip">
+            <article><span>Escala SaaS</span><strong>4 mil</strong><p>clínicas em uma base que ajudei a evoluir</p></article>
+            <article><span>Uso diário</span><strong>10 mil</strong><p>check-ins processados por dia nos aplicativos</p></article>
+            <article><span>Enterprise</span><strong>2 mil</strong><p>unidades atendidas pelas operações que desenvolvi</p></article>
+            <article><span>Experiência</span><strong>4 anos</strong><p>transformando regras de negócio em software</p></article>
+          </div>
         </section>
 
         <section className="work-section section" id="trabalho">
