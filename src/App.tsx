@@ -7,19 +7,19 @@ const ThreeScene = lazy(() => import('./ThreeScene'));
 
 const cases = [
   {
-    id: 'esocial', index: '01', kicker: 'Integração governamental', title: 'Sincronização com eSocial sem perder o controle da operação',
+    id: 'automacao', index: '01', kicker: 'Automação e IA aplicada', title: 'Ferramentas que fazem agentes executarem trabalho real',
+    description: 'Construí workflows de agendamento, integrações entre sistemas, rotinas de dados e tool calls usadas por agentes de atendimento. O trabalho atendia uma operação enterprise distribuída em cerca de 2 mil unidades.',
+    result: 'n8n · agentes · integrações enterprise', stack: ['n8n', 'Node.js', 'MongoDB', 'WhatsApp', 'APIs'],
+  },
+  {
+    id: 'esocial', index: '02', kicker: 'Integração governamental', title: 'Sincronização com eSocial sem perder o controle da operação',
     description: 'Projetei um motor de carga inicial e incremental com backfill, checkpoints, limite diário de requisições, reconciliação e parsers XML. A entrega transformou uma integração sensível em um fluxo observável e testável.',
     result: '97 arquivos · ~9 mil linhas · cobertura unitária', stack: ['Laravel', 'PHP', 'PostgreSQL', 'XML', 'Pest'],
   },
   {
-    id: 'seufisio', index: '02', kicker: 'Performance em SaaS', title: 'Uma rotina crítica duas vezes mais rápida',
+    id: 'seufisio', index: '03', kicker: 'Performance em SaaS', title: 'Uma rotina crítica duas vezes mais rápida',
     description: 'Uma rotina noturna ainda executava quando clínicas começavam o expediente, gerando relatórios incorretos. Revi as consultas, acrescentei os índices ausentes e retirei trabalho que já não alterava o resultado.',
     result: 'De 2 horas para 1 hora · base com ~4 mil clínicas', stack: ['PHP', 'Laravel', 'MySQL', 'Jobs', 'APIs'],
-  },
-  {
-    id: 'automacao', index: '03', kicker: 'Automação e IA aplicada', title: 'Ferramentas que fazem agentes executarem trabalho real',
-    description: 'Construí workflows de agendamento, integrações entre sistemas, rotinas de dados e tool calls usadas por agentes de atendimento. O trabalho atendia uma operação enterprise distribuída em cerca de 2 mil unidades.',
-    result: 'n8n · agentes · integrações enterprise', stack: ['n8n', 'Node.js', 'MongoDB', 'WhatsApp', 'APIs'],
   },
 ];
 
@@ -65,19 +65,19 @@ function App() {
           <div className="hero-orbit" aria-hidden="true"><span className="orbit orbit-one"/><span className="orbit orbit-two"/><img src="/brunofrancio.webp" alt="" /></div>
           <p className="eyebrow">Desenvolvedor de produtos digitais</p>
           <h1>Sistemas que resolvem<TextShimmerWave as="em"> problemas de verdade.</TextShimmerWave></h1>
-          <p className="hero-copy">Transformo regras de negócio complexas em produtos web, APIs e automações que funcionam no mundo real — com clareza, testes e responsabilidade.</p>
+          <p className="hero-copy">Crio produtos escaláveis e vendáveis com IA.</p>
           <div className="hero-actions"><a className="button button-primary" href="#trabalho">Ver o que já construí</a><a className="button button-secondary" href="https://wa.me/5554999832993" target="_blank" rel="noreferrer">Conversar comigo</a></div>
           <div className="social-row" aria-label="Redes profissionais"><a href="https://github.com/BrunoFrancio" target="_blank" rel="noreferrer"><Github/><span>GitHub</span></a><a href="https://www.linkedin.com/in/bruno-francio/" target="_blank" rel="noreferrer"><Linkedin/><span>LinkedIn</span></a><a href="https://wa.me/5554999832993" target="_blank" rel="noreferrer"><WhatsAppIcon/><span>WhatsApp</span></a><a href="https://www.instagram.com/brunofranci0/" target="_blank" rel="noreferrer"><Instagram/><span>Instagram</span></a></div>
           <a className="scroll-cue" href="#trabalho" aria-label="Ir para trabalhos selecionados"><ArrowDown/></a>
         </section>
 
         <section className="proof-section" aria-label="Números da experiência">
-          <p className="proof-title">Impacto em produção</p>
+          <div className="proof-heading"><p className="proof-title">Impacto em produção</p><h2>Produtos operando em<br/><em>escala real.</em></h2><p>Experiência construída com software usado todos os dias por clínicas, equipes e operações distribuídas.</p></div>
           <div className="proof-strip">
-            <article><span>Escala SaaS</span><strong>4 mil</strong><p>clínicas em uma base que ajudei a evoluir</p></article>
-            <article><span>Uso diário</span><strong>10 mil</strong><p>check-ins processados por dia nos aplicativos</p></article>
-            <article><span>Enterprise</span><strong>2 mil</strong><p>unidades atendidas pelas operações que desenvolvi</p></article>
-            <article><span>Experiência</span><strong>4 anos</strong><p>transformando regras de negócio em software</p></article>
+            <article><span>01 · Escala SaaS</span><strong>4 mil</strong><p>clínicas em uma base que ajudei a evoluir</p></article>
+            <article><span>02 · Uso diário</span><strong>10 mil</strong><p>check-ins processados por dia nos aplicativos</p></article>
+            <article><span>03 · Enterprise</span><strong>2 mil</strong><p>unidades atendidas pelas operações que desenvolvi</p></article>
+            <article><span>04 · Experiência</span><strong>4 anos</strong><p>transformando regras de negócio em software</p></article>
           </div>
         </section>
 
@@ -115,7 +115,7 @@ function App() {
 
         <section className="contact-section" id="contato">
           <SiriWave variant="wave" size={560} renderScale={0.65} aria-hidden="true" />
-          <div className="contact-content"><p className="eyebrow">Vamos conversar</p><h2>Tem um problema difícil<br/>que precisa virar <TextShimmerWave as="em">produto?</TextShimmerWave></h2><p>Estou aberto a boas conversas sobre produto, back-end, integrações, automação e oportunidades em times que valorizam responsabilidade técnica.</p><a className="contact-link contact-bounce" href="https://wa.me/5554999832993" target="_blank" rel="noreferrer">Entre em contato <ArrowUpRight/></a><div className="contact-socials"><a href="https://wa.me/5554999832993" target="_blank" rel="noreferrer" aria-label="Conversar pelo WhatsApp"><WhatsAppIcon/><span>WhatsApp</span></a><a href="https://www.instagram.com/brunofranci0/" target="_blank" rel="noreferrer" aria-label="Abrir Instagram de Bruno Francio"><Instagram/><span>@brunofranci0</span></a></div></div>
+          <div className="contact-content"><p className="eyebrow">Vamos conversar</p><h2>Tem um problema difícil<br/>que precisa virar <TextShimmerWave as="em">produto?</TextShimmerWave></h2><p>Me chame e vamos tirar esse projeto do papel, sem compromisso.</p><a className="contact-link contact-bounce" href="https://wa.me/5554999832993" target="_blank" rel="noreferrer">Entre em contato <ArrowUpRight/></a><div className="contact-socials"><a className="whatsapp-link" href="https://wa.me/5554999832993" target="_blank" rel="noreferrer" aria-label="Conversar pelo WhatsApp"><WhatsAppIcon/><span>WhatsApp</span></a><a className="instagram-link" href="https://www.instagram.com/brunofranci0/" target="_blank" rel="noreferrer" aria-label="Abrir Instagram de Bruno Francio"><Instagram/><span>@brunofranci0</span></a></div></div>
         </section>
       </main>
 
