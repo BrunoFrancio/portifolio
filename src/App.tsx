@@ -22,10 +22,10 @@ const cases = [
 ];
 
 const products = [
-  { name: 'LeadHunter', status: 'Piloto validado', description: 'Pesquisa e qualificação de empresas com dados públicos, scoring por evidências, deduplicação, funil auditável e rascunhos com aprovação humana.', meta: 'Python · React · SQLite · Codex CLI' },
-  { name: 'Fluxo', status: 'Em construção', description: 'Operação de conteúdo para clínicas: transforma estratégia, pautas, produção, revisão e aprovação em um fluxo único, com IA e decisão humana.', meta: 'React · TypeScript · Supabase · IA aplicada' },
-  { name: 'Vault', status: 'Em uso', description: 'Memória operacional privada que conecta contexto, decisões, projetos e evidências para agentes executarem trabalho com continuidade e rastreabilidade.', meta: 'Obsidian · Markdown · Git · agentes' },
-  { name: 'Frambo', status: 'Piloto', description: 'SaaS de gestão para clínicas de fisioterapia e pilates, reunindo agenda, prontuário, financeiro e implantação acompanhada por quem constrói o produto.', meta: 'Laravel · React · MariaDB · VPS', href: 'https://brunofrancio.com.br' },
+  { name: 'LeadHunter', status: 'Em produção', description: 'Pesquisa e qualificação de empresas com dados públicos, scoring por evidências, deduplicação, funil auditável e rascunhos com aprovação humana.', meta: 'Python · React · SQLite · Codex CLI' },
+  { name: 'Fluxo', status: 'Em produção', description: 'Operação de conteúdo para clínicas: transforma estratégia, pautas, produção, revisão e aprovação em um fluxo único, com IA e decisão humana.', meta: 'React · TypeScript · Supabase · IA aplicada' },
+  { name: 'Bruno-vault', status: 'Em produção', description: 'Um segundo cérebro capaz de operar decisões e rotinas de uma empresa com agentes de IA, preservando contexto, evidências e histórico entre cada execução.', meta: 'Obsidian · Markdown · Git · agentes' },
+  { name: 'Frambo', status: 'Em produção', description: 'SaaS de gestão para clínicas de fisioterapia e pilates, reunindo agenda, prontuário, financeiro e implantação acompanhada por quem constrói o produto.', meta: 'Laravel · React · MariaDB · VPS', href: 'https://brunofrancio.com.br' },
 ];
 
 const experience = [
