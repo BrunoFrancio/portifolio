@@ -22,9 +22,10 @@ const cases = [
 ];
 
 const products = [
-  { name: 'GlicoVida', status: 'No ar', description: 'Acompanhamento de glicemia, refeições e medicamentos com compartilhamento autorizado entre paciente e farmacêutico.', meta: 'React · TypeScript · Supabase · RLS', href: 'https://glicovida.brunofrancio.com.br' },
-  { name: 'Fluxo', status: 'Em construção', description: 'Operação de conteúdo para clínicas: estratégia, pauta, produção, revisão, aprovação e preparação para distribuição em um só lugar.', meta: 'React · Supabase · IA aplicada', href: 'https://github.com/BrunoFrancio/fluxo' },
-  { name: 'brunariasOs', status: 'No ar', description: 'Máquina pessoal de prospecção com agentes especializados, CRM enxuto, aprovação humana e canais assistidos.', meta: 'Go · SQLite · agentes · VPS', href: 'https://brunarias.brunofrancio.com.br' },
+  { name: 'Fluxo', status: 'Em construção', description: 'Operação de conteúdo para clínicas: transforma estratégia, pautas, produção, revisão e aprovação em um fluxo único, com IA e decisão humana.', meta: 'React · TypeScript · Supabase · IA aplicada' },
+  { name: 'Frambo', status: 'Piloto', description: 'SaaS de gestão para clínicas de fisioterapia e pilates, reunindo agenda, prontuário, financeiro e implantação acompanhada por quem constrói o produto.', meta: 'Laravel · React · MariaDB · VPS', href: 'https://brunofrancio.com.br' },
+  { name: 'Vault', status: 'Em uso', description: 'Memória operacional privada que conecta contexto, decisões, projetos e evidências para agentes executarem trabalho com continuidade e rastreabilidade.', meta: 'Obsidian · Markdown · Git · agentes' },
+  { name: 'LeadHunter', status: 'Piloto validado', description: 'Pesquisa e qualificação de empresas com dados públicos, scoring por evidências, deduplicação, funil auditável e rascunhos com aprovação humana.', meta: 'Python · React · SQLite · Codex CLI' },
 ];
 
 const experience = [
@@ -85,7 +86,12 @@ function App() {
 
         <section className="products-section section" id="produtos">
           <div className="section-intro split"><div><p className="eyebrow">Produtos próprios</p><h2>Do problema até<br/><em>o software no ar.</em></h2></div><p>Projetos em que assumo produto, interface, arquitetura, implantação e a parte difícil: decidir o que vale construir.</p></div>
-          <div className="product-grid">{products.map((product, index) => <a className="product-card" href={product.href} target="_blank" rel="noreferrer" key={product.name}><span className="product-index">0{index + 1}</span><span className="status">{product.status}</span><h3>{product.name}</h3><p>{product.description}</p><span className="product-meta">{product.meta}</span><ArrowUpRight/></a>)}</div>
+          <div className="product-grid">{products.map((product, index) => {
+            const content = <><span className="product-index">0{index + 1}</span><span className="status">{product.status}</span><h3>{product.name}</h3><p>{product.description}</p><span className="product-meta">{product.meta}</span>{product.href && <ArrowUpRight/>}</>;
+            return product.href
+              ? <a className="product-card" href={product.href} target="_blank" rel="noreferrer" key={product.name}>{content}</a>
+              : <article className="product-card" key={product.name}>{content}</article>;
+          })}</div>
         </section>
 
         <section className="experience-section section" id="experiencia">

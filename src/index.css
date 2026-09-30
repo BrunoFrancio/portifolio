@@ -64,7 +64,7 @@ h1 em { display: block; }
 .tags { position: relative; display: flex; gap: .5rem; flex-wrap: wrap; }
 .tags span { padding: .5rem .75rem; border: 1px solid #c9c1b3; border-radius: 999px; font-size: .75rem; }
 .products-section { border-top: 1px solid #27232d; }
-.product-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.product-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
 .product-card { position: relative; min-height: 390px; padding: 2rem; border: 1px solid #302c36; border-radius: 1rem; text-decoration: none; background: linear-gradient(145deg,#15121b,#0d0b12); transition: transform .25s,border-color .25s; }
 .product-card:hover { transform: translateY(-6px); border-color: #ff7047; }
 .product-card svg { position: absolute; right: 1.5rem; bottom: 1.5rem; }
