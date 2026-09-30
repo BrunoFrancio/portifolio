@@ -65,7 +65,7 @@ function App() {
           <div><strong>4 mil</strong><span>clínicas na base de um SaaS que ajudei a evoluir</span></div>
           <div><strong>10 mil</strong><span>check-ins processados por dia nos aplicativos</span></div>
           <div><strong>2 mil</strong><span>unidades em operações enterprise atendidas</span></div>
-          <div><strong>3+ anos</strong><span>transformando regra de negócio em software</span></div>
+          <div><strong>4 anos</strong><span>transformando regra de negócio em software</span></div>
         </section>
 
         <section className="work-section section" id="trabalho">
