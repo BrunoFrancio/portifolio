@@ -23,7 +23,7 @@ nav a:hover { color: #fff; }
 .orbit-two { inset: 1.15rem; border-color: rgba(247,244,236,.18); animation-direction: reverse; animation-duration: 11s; }
 .eyebrow { margin: 0 0 1rem; text-transform: uppercase; letter-spacing: .2em; font-size: .75rem; color: #ff8b68; }
 h1,h2 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -.045em; }
-h1 { max-width: 940px; margin: 0; font-size: clamp(3.4rem, 8vw, 7.4rem); line-height: .9; }
+h1 { max-width: 1200px; margin: 0; font-size: clamp(3.4rem, 7vw, 6.4rem); line-height: .9; }
 h1 em, h2 em { color: #ff7047; font-weight: 400; }
 h1 em { display: block; }
 .hero-copy { max-width: 700px; margin: 1.7rem auto 0; color: #aba7b0; line-height: 1.7; font-size: clamp(1rem, 2vw, 1.2rem); }
