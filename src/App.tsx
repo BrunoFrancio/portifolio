@@ -73,7 +73,7 @@ function App() {
         </section>
 
         <section className="work-section section" id="trabalho">
-          <div className="section-intro"><p className="eyebrow">Trabalho selecionado</p><h2>Não é sobre a lista de tecnologias.<br/><em>É sobre o que mudou.</em></h2></div>
+          <div className="section-intro"><p className="eyebrow">Trabalho selecionado</p><h2>Problemas complexos.<br/><em>Resultados que dá para medir.</em></h2></div>
           <div className="case-layout">
             <div className="case-tabs" role="tablist" aria-label="Casos profissionais">
               {cases.map((item, index) => <button key={item.id} className={activeCase === index ? 'active' : ''} onClick={() => setActiveCase(index)} role="tab" aria-selected={activeCase === index}><span>{item.index}</span>{item.kicker}</button>)}
@@ -109,7 +109,7 @@ function App() {
         </section>
       </main>
 
-      <footer><span>Bruno Francio · Passo Fundo, RS</span><span>Projetado para mostrar trabalho, não só ferramentas.</span><a href="#inicio">Voltar ao topo</a></footer>
+      <footer><span>Bruno Francio · Passo Fundo, RS</span><span>Trabalho, contexto e resultados.</span><a href="#inicio">Voltar ao topo</a></footer>
     </div>
   );
 }
